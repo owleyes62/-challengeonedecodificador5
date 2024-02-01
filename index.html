@@ -12,35 +12,41 @@
 </head>
 
 <body>
-    <header>
-        <img src="./img/Vector.png" id="logo" alt="Logo do site">
-    </header>
     <main class="area__principal">
         <section class="area__digitacao">
-            <input type="text" class="texto__pergunta" name="TextoPergunta" placeholder="Digite seu texto">
-            <div class="area__digitacao__baixa">
-                <p class="observacao">Apenas letras minusculas e sem acento.</p>
-                <div class="butoes__digitacao">
-                    <button onclick="" class="criptografar">Criptografar</button>
-                    <button onclick="" class="descriptografar">Descriptografar</button>
+            <div class="logo__container">
+                <img src="./img/Vector.png" id="logo" alt="Logo do site">
+            </div>
+            <div class="area__digitacao__container">
+                <textarea type="text" class="texto__pergunta" name="TextoPergunta"
+                    placeholder="Digite seu texto"></textarea>
+                <div class="area__digitacao__baixa">
+                    <p class="observacao">Apenas letras minusculas e sem acento.</p>
+                    <div class="butoes__digitacao">
+                        <button onclick="" class="criptografar">Criptografar</button>
+                        <button onclick="" class="descriptografar">Descriptografar</button>
+                    </div>
                 </div>
             </div>
         </section>
         <div class="card">
-            <img src="./img/colder.png" id="imagemTemporaria" alt="imagemTemporaria">
-            <div class="area__copiar">
-                <p class="resposta"><strong>Nenhuma messagem foi encontrada</strong>Digite um texto que vc deseja Criptografar ou descriptografar</p>
+            <div class="card__area__resposta">
+                <img src="./img/colder.png" id="imagemTemporaria" alt="imagemTemporaria">
+                <p class="resposta"><strong>Nenhuma messagem foi encontrada</strong>Digite um texto que vc deseja
+                    Criptografar ou descriptografar</p>
+            </div>
+            <div class="card__area__copiar">
                 <button onclick="" class="copiar">Copiar</button>
             </div>
         </div>
+
     </main>
 
     <footer>
 
     </footer>
 
-    <!-- Adicione scripts JavaScript aqui, se necessário -->
-    <!-- <script src="script.js"></script> -->
+    <script src="decodificador.js"></script>
 
 </body>
 
