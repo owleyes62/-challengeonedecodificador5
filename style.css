@@ -14,25 +14,33 @@ body {
 .area__principal {
     align-items: center;
     display: flex;
-    padding: 0% 20%;
+
 }
 
 .card {
-
+    position: relative;
+    right: 15%;
     display: flex;
     flex-direction: column;
     background-color: white;
     align-items: center;
     justify-content: space-between;
     border-radius: 32px;
-    width: 530px;
-    height: 92dvh;
+    width: 520px;
+    height: 95dvh;
 
 }
 
-.card__area__repsota {}
+.card__area__resposta {
+    margin-bottom: auto;
+    margin-top: auto;
+    align-self: center;
+}
 
-.card__area__copia {}
+.card__area__copiar {
+    padding: 23px;
+
+}
 
 /*texto*/
 
@@ -41,7 +49,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 87dvh;
+    height: 90dvh;
     width: 100%;
 }
 
@@ -55,8 +63,7 @@ body {
 }
 
 .logo__container {
-    width: 150%;
-    height: 150px;
+    width: 80%;
 }
 
 .texto__pergunta {
@@ -96,10 +103,15 @@ body {
     flex-direction: column;
 }
 
+.observacao {
+    padding: 23px;
+}
+
 .butoes__digitacao {
     display: flex;
     justify-content: space-between;
     gap: 24px;
+    padding-left: 23px;
 }
 
 .criptografar {
@@ -131,7 +143,7 @@ body {
     background-color: #D8DFE8;
     border: 1px solid #0A3871;
     color: #0A3871;
-    width: 328px;
+    width: 336px;
     height: 67px;
     text-align: center;
     border-radius: 24px;
@@ -144,3 +156,5 @@ body {
 #logo {
     margin-left: 70px;
 }
+
+#imagemTemporaria {}
