@@ -12,38 +12,42 @@
 </head>
 
 <body>
-    <main class="area__principal">
-        <section class="area__digitacao">
+    <main class="Decodificador">
+        <section class="decodificador__pergunta">
             <div class="logo__container">
-                <img src="./img/Vector.png" id="logo" alt="Logo do site">
+                <img src="./img/logo.png" id="logo" alt="Logo do site">
             </div>
-            <div class="area__digitacao__container">
-                <textarea type="text" class="texto__pergunta" name="TextoPergunta"
+            <div class="decodificador__pergunta__container">
+                <textarea type="text" id="texto" class="texto__pergunta__container" name="TextoPergunta"
                     placeholder="Digite seu texto"></textarea>
-                <div class="area__digitacao__baixa">
-                    <p class="observacao">Apenas letras minusculas e sem acento.</p>
-                    <div class="butoes__digitacao">
-                        <button onclick="" class="criptografar">Criptografar</button>
-                        <button onclick="" class="descriptografar">Descriptografar</button>
+                <div class="decodificador__buttons">
+                    <div class="observacao">
+                        <img src="./img/atenção.png" alt="atenção">
+                        <p class="texto__observacao"> Apenas letras minusculas e sem acento.</p>
+                    </div>
+                    <div class="decodificador__buttons__area">
+                        <button onclick="criptografarTexto()" class="button__criptografar">Criptografar</button>
+                        <button onclick="descriptografarTexto()" class="button__descriptografar">Descriptografar</button>
                     </div>
                 </div>
             </div>
         </section>
         <div class="card">
             <div class="card__area__resposta">
+                <p id="resultado"></p>
                 <img src="./img/colder.png" id="imagemTemporaria" alt="imagemTemporaria">
-                <p class="resposta"><strong>Nenhuma messagem foi encontrada</strong>Digite um texto que vc deseja
+                <p class="area__aviso" id="aviso"><strong>Nenhuma messagem <br> encontrada</strong>Digite um texto que vc deseja <br>
                     Criptografar ou descriptografar</p>
             </div>
-            <div class="card__area__copiar">
-                <button onclick="" class="copiar">Copiar</button>
+            <div class="card__area__button">
+                <button onclick="copiarTexto()" class="button__copiar">Copiar</button>
             </div>
         </div>
 
     </main>
 
-    <footer>
-
+    <footer class="rodape">
+        <h1>Desenvolvido por Iwerson</h1>
     </footer>
 
     <script src="decodificador.js"></script>

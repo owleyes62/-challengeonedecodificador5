@@ -1,59 +1,45 @@
+:root {
+    /*Cores*/
+    --cor-primaria:#F3F5FC;
+    --cor-secundaria:#0A3871; 
+    --cor-terciaria:#D8DFE8;
+    /*Fonte*/
+    --font:'Inter', sans-serif;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: var(--font);
 }
 
 body {
     height: 100dvh;
-    background-color: #F3F5FC;
-    padding: 40px;
+    background-color: var(--cor-primaria);
     max-width: 100%;
 }
 
-.area__principal {
+.Decodificador {
     align-items: center;
     display: flex;
-
+    padding: 1% 10rem 2% 12rem;
 }
 
-.card {
-    position: relative;
-    right: 15%;
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 32px;
-    width: 520px;
-    height: 95dvh;
-
-}
-
-.card__area__resposta {
-    margin-bottom: auto;
-    margin-top: auto;
-    align-self: center;
-}
-
-.card__area__copiar {
-    padding: 23px;
-
-}
-
-/*texto*/
-
-.area__digitacao {
+.decodificador__pergunta {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     height: 90dvh;
     width: 100%;
 }
 
-.area__digitacao__container {
+
+.logo__container {
+    width: 110%;
+}
+
+.decodificador__pergunta__container {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -62,61 +48,45 @@ body {
     height: 100%;
 }
 
-.logo__container {
-    width: 80%;
-}
-
-.texto__pergunta {
-    background-color: #F3F5FC;
-    border: 1px solid #F3F5FC;
-    color: #0A3871;
+.texto__pergunta__container {
+    background-color: var(--cor-primaria);
+    border: 1px solid var(--cor-primaria);
+    color: var(--cor-secundaria);
     width: 680px;
     height: 100%;
     outline: none;
     font-size: 32px;
 }
 
-.texto__pergunta::placeholder {
-    color: #0A3871;
+.texto__pergunta__container::placeholder {
+    color: var(--cor-secundaria);
 }
 
-.obsevacao {
-    font-size: 12px;
-}
-
-.area__resposta {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 40;
-}
-
-.resposta {
-    display: flex;
-    flex-direction: column;
-}
-
-/*butoes*/
-.area__digitacao__baixa {
+.decodificador__buttons {
     display: flex;
     gap: 16px;
     flex-direction: column;
 }
 
 .observacao {
-    padding: 23px;
+    display: flex;
+    gap: 10px;
 }
 
-.butoes__digitacao {
+.texto__observacao {
+    font-size: 12px;
+    padding: 1px;
+}
+
+.decodificador__buttons__area {
     display: flex;
     justify-content: space-between;
     gap: 24px;
-    padding-left: 23px;
 }
 
-.criptografar {
+.button__criptografar {
 
-    background-color: #0A3871;
+    background-color: var(--cor-secundaria);
     color: white;
     width: 328px;
     height: 67px;
@@ -124,37 +94,86 @@ body {
     text-align: center;
     border-radius: 24px;
     font-size: 24px;
-    padding: 24px;
 }
 
-.descriptografar {
-    background-color: #D8DFE8;
-    border: 1px solid #0A3871;
-    color: #0A3871;
+.button__descriptografar {
+    background-color: var(--cor-terciaria);
+    border: 1px solid var(--cor-secundaria);
+    color: var(--cor-secundaria);
     width: 328px;
     height: 67px;
     text-align: center;
     border-radius: 24px;
     font-size: 24px;
-    padding: 24px;
 }
 
-.copiar {
-    background-color: #D8DFE8;
-    border: 1px solid #0A3871;
-    color: #0A3871;
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    justify-content: space-between;
+    word-wrap: break-word;
+    border-radius: 32px;
+    width: 400px;
+    height: 96dvh;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#resultado {
+    text-align: left;
+    font-size: 24px;
+    font-family: var(--font);
+    color: #495057;
+    padding: 0% 5%;
+}
+
+.card__area__resposta {
+    margin-top: 10%;
+    overflow-y: auto;
+}
+
+
+.area__aviso {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+}
+
+#imagemTemporaria {
+    display: inline-block;
+    text-align: center;
+}
+
+
+strong {
+    font-size: 24px;
+}
+
+
+.card__area__button {
+    padding: 6% 10px;
+    align-self: center;
+
+}
+
+.button__copiar {
+    background-color: var(--cor-terciaria);
+    border: 1px solid var(--cor-secundaria);
+    color: var(--cor-secundaria);
     width: 336px;
     height: 67px;
     text-align: center;
     border-radius: 24px;
     font-size: 24px;
+}
+
+.rodape {
+    color: var(--cor-primaria);
     padding: 24px;
+    background-color: var(--cor-terciaria);
+    text-align: center;
+    font-family: var(--font);
+    font-size: 1.0rem;
+    font-weight: 400;
 }
-
-/*imagens*/
-
-#logo {
-    margin-left: 70px;
-}
-
-#imagemTemporaria {}
