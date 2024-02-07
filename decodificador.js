@@ -1,5 +1,13 @@
 function criptografarTexto() {
     let texto = document.querySelector('#texto').value;
+    if (texto.trim() === '') {
+        document.querySelector('#imagemTemporaria').style.display = '';
+        document.querySelector('#aviso').style.display = '';
+        document.querySelector('#resultado').innerText = '';
+        document.querySelector('#buttonCopiar').style.display = 'none';
+        return;
+    }
+
     let resultadoCriptografado = texto
         .replace(/e/g, 'enter')
         .replace(/i/g, 'imes')
@@ -9,12 +17,22 @@ function criptografarTexto() {
 
     document.querySelector('#resultado').innerText = resultadoCriptografado;
     document.querySelector('#imagemTemporaria').style.display = 'none';
+    document.querySelector('#buttonCopiar').style.display = 'inline';
     document.querySelector('#aviso').style.display = 'none';
+
 }
 
 
 function descriptografarTexto() {
     let textoCriptografado = document.querySelector('#texto').value;
+    if (textoCriptografado.trim() === '') {
+        document.querySelector('#imagemTemporaria').style.display = '';
+        document.querySelector('#aviso').style.display = '';
+        document.querySelector('#resultado').innerText = '';
+        document.querySelector('#buttonCopiar').style.display = 'none';
+        return;
+    }
+    
     let resultadoDescriptografado = textoCriptografado
         .replace(/ufat/g, 'u')
         .replace(/ober/g, 'o')
@@ -25,6 +43,9 @@ function descriptografarTexto() {
     document.querySelector('#resultado').innerText = resultadoDescriptografado;
     document.querySelector('#imagemTemporaria').style.display = 'none';
     document.querySelector('#aviso').style.display = 'none';
+    document.querySelector('#buttonCopiar').style.display = 'inline';
+    
+
 }
 
 function copiarTexto() {

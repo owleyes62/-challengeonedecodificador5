@@ -20,7 +20,7 @@ body {
     max-width: 100%;
 }
 
-.Decodificador {
+.decodificador {
     align-items: center;
     display: flex;
     padding: 1% 10rem 2% 12rem;
@@ -114,7 +114,7 @@ body {
     justify-content: space-between;
     word-wrap: break-word;
     border-radius: 32px;
-    width: 400px;
+    width: 420px;
     height: 96dvh;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -143,6 +143,7 @@ body {
 #imagemTemporaria {
     display: inline-block;
     text-align: center;
+    padding-top: 25%;
 }
 
 
@@ -158,7 +159,7 @@ strong {
 }
 
 .button__copiar {
-    background-color: var(--cor-terciaria);
+    background-color: var(--cor-primaria);
     border: 1px solid var(--cor-secundaria);
     color: var(--cor-secundaria);
     width: 336px;
@@ -166,6 +167,7 @@ strong {
     text-align: center;
     border-radius: 24px;
     font-size: 24px;
+    display: none;
 }
 
 .rodape {
@@ -176,4 +178,77 @@ strong {
     font-family: var(--font);
     font-size: 1.0rem;
     font-weight: 400;
+}
+
+@media (max-width:1400px) {
+    .decodificador {
+        flex-direction: column;
+        gap: 20px;
+        overflow-y: auto;
+        padding: 20px;
+    }
+
+    .logo__container {
+        width: 90%;
+        height: 15%;
+    }
+
+    .decodificador__pergunta {
+        height: 70dvh;
+    }
+
+    #imagemTemporaria{
+        display: none;
+    }
+
+    .area__aviso {
+        gap: 10px;
+    }
+
+    br {
+        display: none;
+    }
+
+    .card {
+        width: 688px;
+        height: 5%;
+    }
+
+    .rodape {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+
+
+    body {
+        width: 375px;
+        height: 100%;
+    }
+
+    .decodificador__pergunta {
+        width: 327px;
+    }
+
+    .texto__pergunta__container {
+        width: 343px;
+    }
+
+    .decodificador__buttons__area {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 327px;
+    }
+
+    .button__copiar {
+        width: 278px;
+    }
+
+    .rodape {
+        font-size: 10px;
+        padding: 10px;
+    }
 }
